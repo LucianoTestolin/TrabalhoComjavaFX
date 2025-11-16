@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.shape.Circle?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.semaforo.HelloController">
+
+    <children>
+
+        <Circle fx:id="vermelho" radius="35" style="-fx-fill: gray;"/>
+        <Circle fx:id="amarelo" radius="35" style="-fx-fill: gray;"/>
+        <Circle fx:id="verde" radius="35" style="-fx-fill: gray;"/>
+
+        <Button text="Iniciar" onAction="#iniciar"/>
+        <Button text="Parar" onAction="#parar"/>
+
+    </children>
+
+</VBox>
