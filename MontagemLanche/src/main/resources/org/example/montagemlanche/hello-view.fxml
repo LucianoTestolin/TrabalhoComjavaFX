@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.CheckBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.montagemlanche.HelloController">
+    <TextField fx:id="txtNome" promptText="Nome do cliente" />
+
+    <!-- Tipo de Pão -->
+    <ComboBox fx:id="cbPao" promptText="Tipo de pão">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Francês"/>
+                <String fx:value="Integral"/>
+                <String fx:value="Australiano"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Tipo de Carne -->
+    <VBox spacing="4">
+        <Label text="Tipo de carne:"/>
+        <RadioButton fx:id="rbBovina" text="Bovina" />
+        <RadioButton fx:id="rbFrango" text="Frango" />
+        <RadioButton fx:id="rbSoja" text="Soja" />
+    </VBox>
+
+    <!-- Adicionais -->
+    <VBox spacing="4">
+        <Label text="Adicionais:"/>
+        <CheckBox fx:id="chkQueijo" text="Queijo"/>
+        <CheckBox fx:id="chkBacon" text="Bacon"/>
+        <CheckBox fx:id="chkSalada" text="Salada"/>
+        <CheckBox fx:id="chkMolho" text="Molho"/>
+    </VBox>
+
+    <Button text="Gerar Pedido" onAction="#gerarPedido" />
+
+    <Label fx:id="lblResultado" text="Seu pedido aparecerá aqui." wrapText="true" />
+</VBox>
