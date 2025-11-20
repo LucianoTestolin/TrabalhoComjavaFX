@@ -34,17 +34,15 @@ public class HelloApplication extends Application {
             this.curso.set(curso);
         }
 
-        // propriedades
+        
         public StringProperty nomeProperty() { return nome; }
         public IntegerProperty idadeProperty() { return idade; }
         public StringProperty cursoProperty() { return curso; }
 
-        // getters convencionais (usados por PropertyValueFactory também)
         public String getNome() { return nome.get(); }
         public int getIdade() { return idade.get(); }
         public String getCurso() { return curso.get(); }
 
-        // setters
         public void setNome(String nome) { this.nome.set(nome); }
         public void setIdade(int idade) { this.idade.set(idade); }
         public void setCurso(String curso) { this.curso.set(curso); }
